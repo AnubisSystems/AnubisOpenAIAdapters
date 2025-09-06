@@ -56,7 +56,12 @@ class OpenAIAdapter(IAIServicesManagerPort):
                         "messages": [],
                         "max_tokens": 2000
                     }
-         
+        
+        payload["messages"].append({
+            "role": "system",
+            "content" : [{"type": "text", "text": prompt}]
+        })
+
         if context:
             payload["messages"].append({
                     "role": "system",
@@ -68,7 +73,8 @@ class OpenAIAdapter(IAIServicesManagerPort):
                     "content": []
                 }
         
-        content_user["content"].append( {"type": "text", "text": prompt})
+        # content_user["content"].append( {"type": "text", "text": prompt})
+        
 
         if image_base64:
             content_user["content"].append( 
