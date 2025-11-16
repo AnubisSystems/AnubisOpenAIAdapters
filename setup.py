@@ -24,6 +24,7 @@ setup(
         "requests",
         "dependency_injector",
         "pydantic",
-        "openai"
+        "openai",
+        "AnubisCore @ git+https://github.com/AnubisSystems/AnubisCore.git"
     ],
 )
