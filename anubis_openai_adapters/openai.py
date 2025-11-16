@@ -74,7 +74,7 @@ class OpenAIAdapter(IAIServicesManagerPort):
                 }
         
         # content_user["content"].append( {"type": "text", "text": prompt})
-        
+            
 
         if image_base64:
             content_user["content"].append( 
